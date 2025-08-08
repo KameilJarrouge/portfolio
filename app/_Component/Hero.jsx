@@ -1,0 +1,35 @@
+import React from "react";
+
+function Hero() {
+  return (
+    <section className="flex flex-col items-center py-24 2xl:py-32 gap-6 ">
+      <img
+        src="#"
+        alt="img"
+        className="rounded-full bg-gray-800 mx-auto"
+        width={200}
+        height={200}
+      />{" "}
+      <div className=" flex flex-col gap-2 items-center">
+        <h1 className="text-4xl md:text-5xl font-bold dark:text-gray-100 text-gray-800">
+          Kamil Jarrouj
+        </h1>
+        <p className=" text-lg md:text-xl text-gray-500 dark:text-gray-400">
+          Full-Stack Engineer
+        </p>
+        <p className=" text-gray-500 dark:text-gray-400">
+          I design modular, production-grade software for clinics, retailers,
+          and engineers — tools that last and users love.
+        </p>
+      </div>
+      <a
+        href="#projects"
+        className=" inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+      >
+        View Projects
+      </a>
+    </section>
+  );
+}
+
+export default Hero;
