@@ -20,42 +20,70 @@ import NodeIcon from "./DevIcons/NodeIcon";
 import BashIcon from "./DevIcons/BashIcon";
 import SocketIOIcon from "./DevIcons/SocketIOIcon";
 
+const SECTIONS = [
+  {
+    title: "Languages",
+    badges: [
+      { title: "Javascript", icon: <JavascriptIcon /> },
+      { title: "Python", icon: <PythonIcon /> },
+      { title: "Java", icon: <JavaIcon /> },
+      { title: "PHP", icon: <PHPIcon /> },
+      { title: "SQL", icon: <SQLIcon /> },
+      { title: "Graphql", icon: <GraphQLIcon /> },
+    ],
+  },
+  {
+    title: "Frameworks & Libraries",
+    badges: [
+      { title: "React", icon: <ReactIcon /> },
+      { title: "NextJS", icon: <NextJsIcon /> },
+      { title: "Laravel", icon: <LaravelIcon /> },
+      { title: "ExpressJS", icon: <ExpressJSIcon /> },
+      { title: "ReactNative", icon: <ReactIcon /> },
+      { title: "Socket.io", icon: <SocketIOIcon /> },
+    ],
+  },
+  {
+    title: "Styling & UI",
+    badges: [
+      { title: "Tailwindcss", icon: <TailwindIcon /> },
+      { title: "CSS3", icon: <CSSIcon /> },
+    ],
+  },
+  {
+    title: "Databases",
+    badges: [
+      { title: "SQLite", icon: <SQLiteIcon /> },
+      { title: "MySQL", icon: <MySQLIcon /> },
+    ],
+  },
+  {
+    title: "Tools & Dev Experience",
+    badges: [
+      { title: "Git", icon: <GitIcon /> },
+      { title: "Github", icon: <GithubIcon /> },
+      { title: "Vercel", icon: <VercelIcon /> },
+    ],
+  },
+  {
+    title: "CLI / DX Tools",
+    badges: [
+      { title: "Nodejs", icon: <NodeIcon /> },
+      { title: "Bash", icon: <BashIcon /> },
+    ],
+  },
+];
+
 function Tech() {
   return (
-    <section className="grid grid-cols-3  py-16 px-8 gap-y-5 flex-wrap">
-      <Section title={"Languages"}>
-        <TechBadge icon={<JavascriptIcon />} title={"Javascript"} />
-        <TechBadge icon={<PythonIcon />} title={"Python"} />
-        <TechBadge icon={<JavaIcon />} title={"Java"} />
-        <TechBadge icon={<PHPIcon />} title={"PHP"} />
-        <TechBadge icon={<SQLIcon />} title={"SQL"} />
-        <TechBadge icon={<GraphQLIcon />} title={"Graphql"} />
-      </Section>
-      <Section title={"Frameworks & Libraries"}>
-        <TechBadge icon={<ReactIcon />} title={"React"} />
-        <TechBadge icon={<NextJsIcon />} title={"NextJS"} />
-        <TechBadge icon={<LaravelIcon />} title={"Laravel"} />
-        <TechBadge icon={<ExpressJSIcon />} title={"ExpressJS"} />
-        <TechBadge icon={<ReactIcon />} title={"ReactNative"} />
-        <TechBadge icon={<SocketIOIcon />} title={"Socket.io"} />
-      </Section>
-      <Section title={"Styling & UI"}>
-        <TechBadge icon={<TailwindIcon />} title={"Tailwindcss"} />
-        <TechBadge icon={<CSSIcon />} title={"CSS3"} />
-      </Section>
-      <Section title={"Databases"}>
-        <TechBadge icon={<SQLiteIcon />} title={"SQLite"} />
-        <TechBadge icon={<MySQLIcon />} title={"MySQL"} />
-      </Section>
-      <Section title={"Tools & Dev Experience"}>
-        <TechBadge icon={<GitIcon />} title={"Git"} />
-        <TechBadge icon={<GithubIcon />} title={"Github"} />
-        <TechBadge icon={<VercelIcon />} title={"Vercel"} />
-      </Section>
-      <Section title={"CLI / DX Tools"}>
-        <TechBadge icon={<NodeIcon />} title={"Nodejs"} />
-        <TechBadge icon={<BashIcon />} title={"Bash"} />
-      </Section>
+    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  py-16 px-8 gap-y-5 flex-wrap">
+      {SECTIONS.map((section, index) => (
+        <Section key={index} title={section.title}>
+          {section.badges.map((badge, bIndex) => (
+            <TechBadge key={bIndex} title={badge.title} icon={badge.icon} />
+          ))}
+        </Section>
+      ))}
     </section>
   );
 }

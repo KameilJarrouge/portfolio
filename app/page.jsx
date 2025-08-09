@@ -11,6 +11,7 @@ export default function Home() {
       <Hero />
       <Divider />
       <Tech />
+      <Divider />
     </div>
   );
 }
