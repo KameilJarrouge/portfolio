@@ -162,6 +162,7 @@ const PROJECTS = [
     ],
   },
 ];
+
 function Projects() {
   const [filter, setFilter] = useState("");
   const [showMore, setShowMore] = useState(false);
@@ -194,13 +195,13 @@ function Projects() {
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8">
-        {/* ProjectCard components go here */}
         {PROJECTS.filter(applyFilter)
           .slice(0, showMore || filter !== "" ? undefined : 6)
           .map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
       </div>
+
       {filter === "" && (
         <div className="w-full flex gap-2 items-center mt-[1rem]">
           <Divider />

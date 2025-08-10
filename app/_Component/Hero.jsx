@@ -6,7 +6,7 @@ function Hero() {
       <img
         src="#"
         alt="img"
-        className="rounded-full bg-gray-800 mx-auto"
+        className="rounded-full bg-white dark:bg-gray-800  mx-auto"
         width={200}
         height={200}
       />{" "}
