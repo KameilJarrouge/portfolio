@@ -54,6 +54,16 @@ function About() {
           </ul>
         </div>
 
+        {/* Languages */}
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold mb-2">Languages</h3>
+          <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1 flex gap-6">
+            <li>English (fluent)</li>
+            <li>Arabic (native)</li>
+            <li>German (A1-A2)</li>
+          </ul>
+        </div>
+
         <div className="mb-8">
           <h3 className="text-xl font-semibold mb-2">Certificates</h3>
           <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
