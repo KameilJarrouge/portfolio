@@ -76,7 +76,7 @@ const SECTIONS = [
 
 function Tech() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  py-16 px-8 gap-y-5 flex-wrap">
+    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   py-16 px-8 gap-12 2xl:gap-16 w-fit self-center">
       {SECTIONS.map((section, index) => (
         <Section key={index} title={section.title}>
           {section.badges.map((badge, bIndex) => (

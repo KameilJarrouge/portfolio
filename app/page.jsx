@@ -1,4 +1,5 @@
 "use client";
+import About from "./_Component/About";
 import Divider from "./_Component/Divider";
 import Header from "./_Component/Header";
 import Hero from "./_Component/Hero";
@@ -15,6 +16,7 @@ export default function Home() {
       <Divider />
       <Projects />
       <Divider />
+      <About />
     </div>
   );
 }

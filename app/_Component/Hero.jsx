@@ -4,12 +4,10 @@ function Hero() {
   return (
     <section className="flex flex-col items-center py-24 2xl:py-32 gap-6 ">
       <img
-        src="#"
+        src="/avatar.jpg"
         alt="img"
-        className="rounded-full bg-white dark:bg-gray-800  mx-auto"
-        width={200}
-        height={200}
-      />{" "}
+        className="rounded-full w-[200px] h-[200px] bg-white dark:bg-gray-800  mx-auto "
+      />
       <div className=" flex flex-col gap-2 items-center">
         <h1 className="text-4xl md:text-5xl font-bold dark:text-gray-100 text-gray-800">
           Kamil Jarrouj

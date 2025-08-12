@@ -34,7 +34,7 @@ function ProjectCard({ project }) {
 
       <a
         href="#"
-        className="text-blue-600 dark:text-blue-400 text-sm hover:underline"
+        className="text-blue-600 dark:text-blue-400 text-sm hover:underline w-fit"
       >
         View Details
       </a>
