@@ -180,7 +180,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="py-16 px-2 w-full 2xl:w-[96rem] min-h-[40rem]  self-center"
+      className="py-16 px-4 w-full 2xl:w-[96rem] min-h-[40rem]  self-center"
     >
       <div className="w-full flex justify-between items-center mb-8 ">
         <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 ">
@@ -194,7 +194,7 @@ function Projects() {
           onChange={(e) => setFilter(e.target.value)}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
         {PROJECTS.filter(applyFilter)
           .slice(0, showMore || filter !== "" ? undefined : 6)
           .map((project, index) => (

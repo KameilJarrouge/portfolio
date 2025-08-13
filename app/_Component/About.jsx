@@ -1,11 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
+import ChooseCVModal from "./Modals/ChooseCVModal";
 
 function About() {
+  const [fullstackModalIsOpen, setFullstackModalIsOpen] = useState(false);
+  const [softwareEngineerModalIsOpen, setSoftwareEngineerModalIsOpen] =
+    useState(false);
+
   return (
     <section
       id="about"
-      className=" text-gray-800 dark:text-gray-100 py-16 px-2 flex flex-col justify-center gap-6 w-full xl:w-7xl 2xl:w-[96rem] min-h-[40rem] self-center xl:flex-row"
+      className="relative text-gray-800 dark:text-gray-100 py-16 px-2 flex flex-col justify-center gap-6 w-full xl:w-7xl 2xl:w-[96rem] min-h-[40rem] self-center xl:flex-row"
     >
+      {
+        <>
+          <ChooseCVModal
+            isOpen={fullstackModalIsOpen}
+            setIsOpen={setFullstackModalIsOpen}
+            uniqueName="fullstack"
+            jobTitle="Full-Stack Developer"
+            listOfCVs={[
+              { url: "#", title: "🌏 International" },
+              { url: "#", title: "🇩🇪 Germany" },
+              { url: "#", title: "🇷🇴 Romania" },
+              { url: "#", title: "🇧🇬 Bulgaria" },
+              { url: "#", title: "🇨🇿 Czechia" },
+              { url: "#", title: "🇸🇰 Slovakia" },
+            ]}
+          />
+          <ChooseCVModal
+            isOpen={softwareEngineerModalIsOpen}
+            setIsOpen={setSoftwareEngineerModalIsOpen}
+            uniqueName="softwareEngineer"
+            jobTitle="Software Engineer"
+            listOfCVs={[
+              { url: "#", title: "🌏 International" },
+              { url: "#", title: "🇩🇪 Germany" },
+              { url: "#", title: "🇷🇴 Romania" },
+              { url: "#", title: "🇧🇬 Bulgaria" },
+              { url: "#", title: "🇨🇿 Czechia" },
+              { url: "#", title: "🇸🇰 Slovakia" },
+            ]}
+          />
+        </>
+      }
+
       <div className="w-full xl:w-2/5 flex flex-col gap-6">
         <img
           src="/about.jpg"
@@ -18,18 +56,18 @@ function About() {
             Download CV
           </h3>
           <div className="flex flex-wrap gap-4">
-            <a
-              href="/cv-fullstack.pdf"
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600"
+            <button
+              onClick={() => setFullstackModalIsOpen(true)}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
             >
               Full-Stack Developer
-            </a>
-            <a
-              href="/cv-software.pdf"
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600"
+            </button>
+            <button
+              onClick={() => setSoftwareEngineerModalIsOpen(true)}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
             >
               Software Engineer
-            </a>
+            </button>
           </div>
         </div>
       </div>

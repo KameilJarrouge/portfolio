@@ -12,7 +12,7 @@ function ProjectCard({ project }) {
       <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
         {project.description}
       </p>
-      <div className="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-4">
+      <div className="flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300 mb-4">
         {project.stack.map((tech, index) => (
           <span
             key={index}
