@@ -180,7 +180,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="py-16 px-2 w-7xl 2xl:w-[96rem] min-h-[40rem]  self-center"
+      className="py-16 px-2 w-full 2xl:w-[96rem] min-h-[40rem]  self-center"
     >
       <div className="w-full flex justify-between items-center mb-8 ">
         <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 ">
@@ -207,7 +207,7 @@ function Projects() {
           <Divider />
           <button
             onClick={() => setShowMore(!showMore)}
-            className="w-[20ch] text-gray-700 dark:text-gray-200 cursor-pointer text-sm"
+            className="w-[25ch] text-gray-700 dark:text-gray-200 cursor-pointer text-sm"
           >
             {showMore ? "Show Less" : "Show More"}
           </button>
