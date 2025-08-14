@@ -36,7 +36,7 @@ function Modal({ isOpen, close, children, uniqueName = "unique" }) {
         <div className="fixed left-0 top-0 w-full h-full  bg-black/60 z-50 overflow-hidden backdrop-blur flex flex-col justify-center items-center ">
           <div
             id="content"
-            className={`w-fit h-fit bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 rounded p-2 animate-popIn shadow-lg shadow-black relative`}
+            className={`w-fit h-fit bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 rounded animate-popIn shadow-lg shadow-black relative`}
           >
             {children}
           </div>

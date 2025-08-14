@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import ProjectModal from "./Modals/ProjectModal";
 
 function ProjectCard({ project }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 flex flex-col justify-between">
+      <ProjectModal
+        isOpen={isModalOpen}
+        setIsOpen={setIsModalOpen}
+        project={project}
+      />
       <div className="absolute bottom-[0.5rem] right-[0.5rem] text-xs text-gray-500 dark:text-gray-400 ">
         {project.footer}
       </div>
@@ -32,12 +40,12 @@ function ProjectCard({ project }) {
         </ul>
       )}
 
-      <a
-        href="#"
-        className="text-blue-600 dark:text-blue-400 text-sm hover:underline w-fit"
+      <button
+        onClick={() => setIsModalOpen(true)}
+        className="text-blue-600 dark:text-blue-400 text-sm hover:underline w-fit cursor-pointer"
       >
         View Details
-      </a>
+      </button>
     </div>
   );
 }

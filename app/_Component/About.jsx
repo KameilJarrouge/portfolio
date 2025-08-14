@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import ChooseCVModal from "./Modals/ChooseCVModal";
+import PersonalInfoModal from "./Modals/PersonalInfoModal";
 
 function About() {
   const [fullstackModalIsOpen, setFullstackModalIsOpen] = useState(false);
   const [softwareEngineerModalIsOpen, setSoftwareEngineerModalIsOpen] =
     useState(false);
+  const [personalInfoModalIsOpen, setPersonalInfoModalIsOpen] = useState(false);
 
   return (
     <section
@@ -41,6 +43,20 @@ function About() {
               { url: "#", title: "🇸🇰 Slovakia" },
             ]}
           />
+          <PersonalInfoModal
+            isOpen={personalInfoModalIsOpen}
+            setIsOpen={setPersonalInfoModalIsOpen}
+            uniqueName="personalInformation"
+            jobTitle="Personal Information"
+            listOfCVs={[
+              { url: "#", title: "🌏 International" },
+              { url: "#", title: "🇩🇪 Germany" },
+              { url: "#", title: "🇷🇴 Romania" },
+              { url: "#", title: "🇧🇬 Bulgaria" },
+              { url: "#", title: "🇨🇿 Czechia" },
+              { url: "#", title: "🇸🇰 Slovakia" },
+            ]}
+          />
         </>
       }
 
@@ -50,6 +66,19 @@ function About() {
           alt="Kamil"
           className="w-fit h-[20rem] bg-gray-800"
         />
+        {/* Call to Action */}
+        <div className="">
+          <p className="text-gray-500 dark:text-gray-400">
+            More on my personal life? Check{" "}
+            <button
+              onClick={() => setPersonalInfoModalIsOpen(true)}
+              className="text-blue-500 dark:text-blue-400 hover:underline cursor-pointer"
+            >
+              this
+            </button>
+            .
+          </p>
+        </div>
 
         <div className="">
           <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2">

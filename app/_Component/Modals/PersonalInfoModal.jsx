@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "./Modal";
 
-function ChooseCVModal({
+function PersonalInfoModal({
   uniqueName = "",
   isOpen,
   setIsOpen,
@@ -41,4 +41,4 @@ function ChooseCVModal({
   );
 }
 
-export default ChooseCVModal;
+export default PersonalInfoModal;
