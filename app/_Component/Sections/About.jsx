@@ -13,53 +13,6 @@ function About() {
       id="about"
       className="relative text-gray-800 dark:text-gray-100 py-16 px-2 flex flex-col justify-center gap-6 w-full xl:w-7xl 2xl:w-[96rem] min-h-[40rem] self-center xl:flex-row"
     >
-      {
-        <>
-          <ChooseCVModal
-            isOpen={fullstackModalIsOpen}
-            setIsOpen={setFullstackModalIsOpen}
-            uniqueName="fullstack"
-            jobTitle="Full-Stack Developer"
-            listOfCVs={[
-              { url: "#", title: "🌏 International" },
-              { url: "#", title: "🇩🇪 Germany" },
-              { url: "#", title: "🇷🇴 Romania" },
-              { url: "#", title: "🇧🇬 Bulgaria" },
-              { url: "#", title: "🇨🇿 Czechia" },
-              { url: "#", title: "🇸🇰 Slovakia" },
-            ]}
-          />
-          <ChooseCVModal
-            isOpen={softwareEngineerModalIsOpen}
-            setIsOpen={setSoftwareEngineerModalIsOpen}
-            uniqueName="softwareEngineer"
-            jobTitle="Software Engineer"
-            listOfCVs={[
-              { url: "#", title: "🌏 International" },
-              { url: "#", title: "🇩🇪 Germany" },
-              { url: "#", title: "🇷🇴 Romania" },
-              { url: "#", title: "🇧🇬 Bulgaria" },
-              { url: "#", title: "🇨🇿 Czechia" },
-              { url: "#", title: "🇸🇰 Slovakia" },
-            ]}
-          />
-          <PersonalInfoModal
-            isOpen={personalInfoModalIsOpen}
-            setIsOpen={setPersonalInfoModalIsOpen}
-            uniqueName="personalInformation"
-            jobTitle="Personal Information"
-            listOfCVs={[
-              { url: "#", title: "🌏 International" },
-              { url: "#", title: "🇩🇪 Germany" },
-              { url: "#", title: "🇷🇴 Romania" },
-              { url: "#", title: "🇧🇬 Bulgaria" },
-              { url: "#", title: "🇨🇿 Czechia" },
-              { url: "#", title: "🇸🇰 Slovakia" },
-            ]}
-          />
-        </>
-      }
-
       <div className="w-full xl:w-2/5 flex flex-col gap-6">
         <img
           src="/about.jpg"
@@ -194,7 +147,7 @@ function About() {
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1 ">
               <li>English (fluent)</li>
               <li>Arabic (native)</li>
-              <li>German (A1-A2)</li>
+              {/* <li>German (A1-A2)</li> */}
             </ul>
           </div>
         </div>
@@ -213,6 +166,52 @@ function About() {
           </p>
         </div>
       </div>
+      {
+        <div className="absolute top-0 left-0">
+          <ChooseCVModal
+            isOpen={fullstackModalIsOpen}
+            setIsOpen={setFullstackModalIsOpen}
+            uniqueName="fullstack"
+            jobTitle="Full-Stack Developer"
+            listOfCVs={[
+              { url: "#", title: "🌏 International" },
+              { url: "#", title: "🇩🇪 Germany" },
+              { url: "#", title: "🇷🇴 Romania" },
+              { url: "#", title: "🇧🇬 Bulgaria" },
+              { url: "#", title: "🇨🇿 Czechia" },
+              { url: "#", title: "🇸🇰 Slovakia" },
+            ]}
+          />
+          <ChooseCVModal
+            isOpen={softwareEngineerModalIsOpen}
+            setIsOpen={setSoftwareEngineerModalIsOpen}
+            uniqueName="softwareEngineer"
+            jobTitle="Software Engineer"
+            listOfCVs={[
+              { url: "#", title: "🌏 International" },
+              { url: "#", title: "🇩🇪 Germany" },
+              { url: "#", title: "🇷🇴 Romania" },
+              { url: "#", title: "🇧🇬 Bulgaria" },
+              { url: "#", title: "🇨🇿 Czechia" },
+              { url: "#", title: "🇸🇰 Slovakia" },
+            ]}
+          />
+          <PersonalInfoModal
+            isOpen={personalInfoModalIsOpen}
+            setIsOpen={setPersonalInfoModalIsOpen}
+            uniqueName="personalInformation"
+            jobTitle="Personal Information"
+            listOfCVs={[
+              { url: "#", title: "🌏 International" },
+              { url: "#", title: "🇩🇪 Germany" },
+              { url: "#", title: "🇷🇴 Romania" },
+              { url: "#", title: "🇧🇬 Bulgaria" },
+              { url: "#", title: "🇨🇿 Czechia" },
+              { url: "#", title: "🇸🇰 Slovakia" },
+            ]}
+          />
+        </div>
+      }
     </section>
   );
 }

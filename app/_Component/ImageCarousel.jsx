@@ -15,18 +15,22 @@ export default function ImageCarousel({ images }) {
 
   return (
     <>
+      <div className="  bg-black/80 text-white text-sm px-2 py-1 rounded-t">
+        {images[index].title}
+      </div>
       <Swiper
         modules={[Pagination]}
         pagination={{ clickable: true }}
         spaceBetween={10}
         slidesPerView={1}
+        onSlideChange={(e) => setIndex(e.activeIndex)}
       >
         {images.map((img, i) => (
           <SwiperSlide key={i}>
             <img
-              src={img}
+              src={img.src}
               onClick={() => {
-                setIndex(i);
+                // setIndex(i);
                 setOpen(true);
               }}
               className="cursor-pointer"
@@ -34,12 +38,26 @@ export default function ImageCarousel({ images }) {
           </SwiperSlide>
         ))}
       </Swiper>
-
       <ImageLightbox
         open={open}
         setOpen={setOpen}
-        slides={images.map((image) => ({ src: image }))}
+        slides={images}
         index={index}
+        render={{
+          slide: ({ slide }) => (
+            <div className="relative w-[95vw] md:w-[85vw] lg:w-[75vw] xl:w-[65vw] h-fit ">
+              <img
+                src={slide.src}
+                alt={slide.title}
+                className="rounded shadow"
+              />
+
+              <div className="absolute bottom-2 left-2 bg-black/40 hover:bg-black/80 text-white/40 hover:text-white text-sm px-2 py-1 rounded">
+                {slide.title}
+              </div>
+            </div>
+          ),
+        }}
       />
     </>
   );

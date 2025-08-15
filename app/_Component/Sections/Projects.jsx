@@ -25,8 +25,8 @@ const PROJECTS = [
       "printable",
       "admin-tools",
     ],
-    diagrams: ["/avatar.jpg", "/avatar.jpg", "/avatar.jpg", "/avatar.jpg"],
-    screenshots: ["/avatar.jpg", "/avatar.jpg", "/avatar.jpg", "/avatar.jpg"],
+    // diagrams: ["/avatar.jpg", "/avatar.jpg", "/avatar.jpg", "/avatar.jpg"],
+    // screenshots: ["/avatar.jpg", "/avatar.jpg", "/avatar.jpg", "/avatar.jpg"],
     repos: [{ name: "My-Lab", url: "#" }],
   },
   {
@@ -173,6 +173,7 @@ function Projects() {
     const query = filter.toLowerCase();
     return (
       project.title.toLowerCase().includes(query) ||
+      project.type?.toLowerCase().includes(query) ||
       project.stack.some((tech) => tech.toLowerCase().includes(query)) ||
       project.description?.toLowerCase().includes(query) ||
       project.highlights?.some((h) => h.toLowerCase().includes(query)) ||
