@@ -20,3 +20,13 @@ body {
     }
   }
 }
+/* Prevent text selection inside the modal */
+.modal-content,
+.swiper,
+.swiper-slide,
+.swiper-button-next,
+.swiper-button-prev {
+  user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -ms-user-select: none; /* For IE/Edge */
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ChooseCVModal from "./Modals/ChooseCVModal";
-import PersonalInfoModal from "./Modals/PersonalInfoModal";
+import ChooseCVModal from "../Modals/ChooseCVModal";
+import PersonalInfoModal from "../Modals/PersonalInfoModal";
 
 function About() {
   const [fullstackModalIsOpen, setFullstackModalIsOpen] = useState(false);

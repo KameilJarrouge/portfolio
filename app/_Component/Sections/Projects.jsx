@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ProjectCard from "./ProjectCard";
-import Divider from "./Divider";
+import ProjectCard from "../ProjectCard";
+import Divider from "../Divider";
 
 const PROJECTS = [
   {
@@ -14,7 +14,7 @@ const PROJECTS = [
       "Automates envelope labeling for daily workflow",
       "Built with a clean UI and SQLite for simplicity",
     ],
-    footer: "Freelance",
+    type: "Freelance",
     tags: [
       "medical",
       "clinic",
@@ -25,6 +25,9 @@ const PROJECTS = [
       "printable",
       "admin-tools",
     ],
+    diagrams: ["/avatar.jpg", "/avatar.jpg", "/avatar.jpg", "/avatar.jpg"],
+    screenshots: ["/avatar.jpg", "/avatar.jpg", "/avatar.jpg", "/avatar.jpg"],
+    repos: [{ name: "My-Lab", url: "#" }],
   },
   {
     title: "Tracking & Attendance System",
@@ -37,7 +40,7 @@ const PROJECTS = [
       "Modular architecture across frontend, backend, and AI layers",
       "Admin dashboard for managing users and attendance logs",
     ],
-    footer: "University",
+    type: "University",
     tags: [
       "education",
       "AI",
@@ -59,7 +62,7 @@ const PROJECTS = [
       "Optimized mobile UX and secure transaction flow",
       "Designed for real-world deployment and scalability",
     ],
-    footer: "Swan Technology",
+    type: "Swan Technology",
     tags: [
       "e-commerce",
       "fashion",
@@ -81,7 +84,7 @@ const PROJECTS = [
       "Improved communication and workflow efficiency across departments",
       "Designed and deployed for production use at AL-Hawash Private University",
     ],
-    footer: "Swan Technology",
+    type: "Swan Technology",
     tags: [
       "university",
       "document-management",
@@ -103,7 +106,7 @@ const PROJECTS = [
       "Designed for daily use by a practicing dentist",
       "Lightweight architecture using SQLite and ExpressJS",
     ],
-    footer: "Freelance",
+    type: "Freelance",
     tags: [
       "medical",
       "dental",
@@ -126,7 +129,7 @@ const PROJECTS = [
       "MySQL-backed patient record storage and retrieval",
       "Still in use years later with minimal maintenance",
     ],
-    footer: "Freelance",
+    type: "Freelance",
     tags: [
       "medical",
       "ophthalmology",
@@ -149,7 +152,7 @@ const PROJECTS = [
       "Built for daily use with intuitive UI and fast access",
       "Reflects personal workflow and engineering philosophy",
     ],
-    footer: "Personal",
+    type: "Personal",
     tags: [
       "personal",
       "productivity",

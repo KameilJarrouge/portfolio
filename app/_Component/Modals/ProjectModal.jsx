@@ -1,60 +1,109 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "./Modal";
+import ImageCarousel from "../ImageCarousel";
 
 function ProjectModal({ isOpen, setIsOpen, project }) {
-  const [selectedTab, setSelectedTab] = useState("Overview");
   return (
     <Modal
       isOpen={isOpen}
       close={() => setIsOpen(false)}
       uniqueName={"Project-" + project.title}
     >
-      <div className="w-[90vw] h-[80vh] xl:w-[90vw] xl:h-[90vh] overflow-auto  flex flex-col gap-4 relative ">
-        <div className="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 shadow-md sticky top-0 z-50 flex flex-col-reverse gap-2  md:flex-row md:justify-between md:items-center h-fit px-3 py-1.5 rounded-t">
-          <div className="flex justify-between sm:justify-start sm:gap-6 ">
-            <Tab
-              selectedTab={selectedTab}
-              setSelectedTab={setSelectedTab}
-              tabName={"Overview"}
-            />
-            <Tab
-              selectedTab={selectedTab}
-              setSelectedTab={setSelectedTab}
-              tabName={"Diagrams"}
-            />
-            <Tab
-              selectedTab={selectedTab}
-              setSelectedTab={setSelectedTab}
-              tabName={"Screenshots"}
-            />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 ">
-            {project.title}
-          </h3>
-        </div>
+      <div className="max-w-[90vw] w-fit h-fit max-h-[80vh] xl:max-h-[90vh]  overflow-auto bg-white dark:bg-gray-900 p-6 rounded-lg ">
+        {/* Title + Stack */}
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+          {project.title}{" "}
+          <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
+            ({project.type})
+          </span>
+        </h2>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+          {project.stack.join(" • ")}
+        </p>
 
-        <div className="flex flex-col gap-2 px-4">
-          <p className="text-gray-600 dark:text-gray-300 text-sm mb-2 pr-4 h-[20rem]">
-            Info goes here
-          </p>
-          <div className="w-full grid grid-cols-2 xl:grid-cols-3 gap-3 "></div>
-        </div>
-      </div>
+        {/* Overview Section */}
+        {project.description && (
+          <section className="mb-6 max-w-[70ch]">
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              Overview
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300">
+              {project.description}
+            </p>
+          </section>
+        )}
+
+        {/* Highlights Section */}
+        {project.highlights?.length > 0 && (
+          <section className="mb-6">
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              Highlights
+            </h3>
+            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+              {project.highlights.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {project.diagrams?.length > 0 && (
+          <section className="mb-6 max-w-[90ch]">
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              Architecture / Diagrams
+            </h3>
+            <ImageCarousel images={project.diagrams} />
+          </section>
+        )}
+
+        {/* Screenshots Section */}
+        {project.screenshots?.length > 0 && (
+          <section className="mb-6 max-w-[90ch]">
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              Screenshots
+            </h3>
+            <ImageCarousel images={project.screenshots} />
+          </section>
+        )}
+
+        {/* Footer / Links */}
+        {/* <div className="mt-6 flex justify-between self-end items-center text-sm text-gray-500 dark:text-gray-400">
+          {project.repo && (
+            <a
+              href={project.repo}
+              target="_blank"
+              className="text-blue-500 hover:underline"
+            >
+              View Code
+            </a>
+          )}
+        </div> */}
+
+        {/* Repos */}
+        {project.repos?.length > 0 && (
+          <section className="mb-6">
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              Code
+            </h3>
+            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+              {project.repos.map((repo, i) => (
+                <li key={i}>
+                  {" "}
+                  <a
+                    href={repo.url}
+                    target="_blank"
+                    className="text-blue-500 hover:underline"
+                  >
+                    {repo.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </div>{" "}
     </Modal>
   );
 }
 
 export default ProjectModal;
-
-function Tab({ selectedTab, setSelectedTab, tabName }) {
-  return (
-    <button
-      onClick={() => setSelectedTab(tabName)}
-      className={` font-semibold text-gray-600 dark:text-gray-300 cursor-pointer ${
-        selectedTab === tabName && "underline underline-offset-8"
-      } `}
-    >
-      {tabName}
-    </button>
-  );
-}

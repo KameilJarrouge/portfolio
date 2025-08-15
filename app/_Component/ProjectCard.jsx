@@ -12,7 +12,7 @@ function ProjectCard({ project }) {
         project={project}
       />
       <div className="absolute bottom-[0.5rem] right-[0.5rem] text-xs text-gray-500 dark:text-gray-400 ">
-        {project.footer}
+        {project.type}
       </div>
       <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
         {project.title}
