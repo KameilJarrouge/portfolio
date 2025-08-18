@@ -42,12 +42,14 @@ function ProjectCard({ project }) {
         </ul>
       )}
 
-      <button
-        onClick={() => setIsModalOpen(true)}
-        className="text-blue-600 dark:text-blue-400 text-sm hover:underline w-fit cursor-pointer "
-      >
-        View Details
-      </button>
+      {project.hasMoreDetails && (
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="text-blue-600 dark:text-blue-400 text-sm hover:underline w-fit cursor-pointer "
+        >
+          More Details
+        </button>
+      )}
     </div>
   );
 }

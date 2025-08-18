@@ -57,10 +57,10 @@ function About() {
         {/* Intro */}
         <h2 className="text-3xl font-bold mb-4">About Me</h2>
         <p className="text-lg text-gray-600 dark:text-gray-300  mb-6 max-w-[70ch]">
-          I'm a full-stack engineer who builds tools that solve real-world
-          problems — from clinic management systems to DIY health trackers. I
-          design with empathy, prioritize reliability, and believe that great
-          software should feel invisible to the user.
+          I'm a full-stack engineer with a focus on building reliable,
+          user-friendly software. Whether it's internal tools, client-facing
+          platforms, or personal projects, I care deeply about clarity,
+          maintainability, and real-world impact.
         </p>
 
         {/* Education */}

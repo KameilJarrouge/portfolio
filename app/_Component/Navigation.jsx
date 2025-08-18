@@ -4,8 +4,8 @@ import NavLink from "./NavLink";
 
 function Navigation() {
   return (
-    <nav className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 className="text-xl font-bold">Kamil Jarrouj</h1>
+    <nav className="max-w-7xl mx-auto px-4 sm:py-3 flex sm:flex-row sm:justify-between sm:items-center flex-col items-center pt-3 pb-1">
+      <h1 className="text-xl font-bold">Kamil Victor Jarrouj</h1>
 
       <ul className="flex gap-6 text-sm items-center">
         <li>

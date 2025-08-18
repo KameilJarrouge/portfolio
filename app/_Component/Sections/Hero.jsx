@@ -10,14 +10,14 @@ function Hero() {
       />
       <div className=" flex flex-col gap-2 items-center">
         <h1 className="text-4xl md:text-5xl font-bold dark:text-gray-100 text-gray-800">
-          Kamil Jarrouj
+          Kamil Victor Jarrouj
         </h1>
         <p className=" text-lg md:text-xl text-gray-500 dark:text-gray-400">
           Full-Stack Engineer
         </p>
         <p className=" text-gray-500 dark:text-gray-400 px-2">
-          I design modular, production-grade software for clinics, retailers,
-          and engineers — tools that last and users love.
+          I build thoughtful, reliable software — from backend systems to
+          intuitive user interfaces.
         </p>
       </div>
       <a
