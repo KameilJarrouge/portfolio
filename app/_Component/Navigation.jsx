@@ -9,6 +9,9 @@ function Navigation() {
 
       <ul className="flex gap-6 text-sm items-center">
         <li>
+          <NavLink href={"#techStack"} title={"Tech Stack"} />
+        </li>
+        <li>
           <NavLink href={"#projects"} title={"Projects"} />
         </li>
         <li>

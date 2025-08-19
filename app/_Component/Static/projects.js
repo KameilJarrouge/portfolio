@@ -22,8 +22,11 @@ const PROJECTS = [
       "admin-tools",
     ],
     repos: [{ title: "My-Lab", url: "#" }],
+    screenshots: [
+      { title: "Test", src: "/avatar.jpg" },
+      { title: "Test", src: "/me.png" },
+    ],
     hasMoreDetails: true,
-    recommendation: "#",
   },
   {
     title: "Sabah Style Mobile App",

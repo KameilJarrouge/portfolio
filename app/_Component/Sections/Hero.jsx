@@ -13,7 +13,7 @@ function Hero() {
         <p className=" text-lg md:text-xl text-gray-500 dark:text-gray-400">
           Full-Stack Engineer
         </p>
-        <p className=" text-gray-500 dark:text-gray-400 px-2">
+        <p className=" text-gray-500 dark:text-gray-400 px-2 text-center">
           I build thoughtful, reliable software — from backend systems to
           intuitive user interfaces.
         </p>

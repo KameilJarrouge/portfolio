@@ -11,51 +11,12 @@ function About() {
   return (
     <section
       id="about"
-      className="relative text-gray-800 dark:text-gray-100 py-16 px-2 flex flex-col justify-center gap-6 w-full xl:w-7xl 2xl:w-[96rem] min-h-[40rem] self-center xl:flex-row"
+      className="relative text-gray-800 dark:text-gray-100 py-16 px-4 mx-auto xl:w-7xl 2xl:w-[96rem] min-h-[40rem] flex flex-col xl:flex-row gap-6"
     >
-      <div className="w-full xl:w-2/5 flex flex-col gap-6">
-        <img
-          src="/avatar.jpg"
-          alt="Kamil"
-          className="w-full h-fit bg-gray-800"
-        />
-        {/* Call to Action */}
-        <div className="">
-          <p className="text-gray-500 dark:text-gray-400">
-            More on my personal life? Check{" "}
-            <button
-              onClick={() => setPersonalInfoModalIsOpen(true)}
-              className="text-blue-500 dark:text-blue-400 hover:underline cursor-pointer"
-            >
-              this
-            </button>
-            .
-          </p>
-        </div>
-
-        <div className="">
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2">
-            Download CV
-          </h3>
-          <div className="flex flex-wrap gap-4">
-            <button
-              onClick={() => setFullstackModalIsOpen(true)}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
-            >
-              Full-Stack Developer
-            </button>
-            <button
-              onClick={() => setSoftwareEngineerModalIsOpen(true)}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
-            >
-              Software Engineer
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="w-full xl:w-3/5 ">
+      <div>
         {/* Intro */}
         <h2 className="text-3xl font-bold mb-4">About Me</h2>
+
         <p className="text-lg text-gray-600 dark:text-gray-300  mb-6 max-w-[70ch]">
           I'm a full-stack engineer with a focus on building reliable,
           user-friendly software. Whether it's internal tools, client-facing
@@ -153,7 +114,7 @@ function About() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-6">
+        <div className=" xl:mt-6">
           <p className="text-gray-500 dark:text-gray-400">
             Curious how I turn ideas into tools? Explore my{" "}
             <a
@@ -165,6 +126,38 @@ function About() {
             .
           </p>
         </div>
+      </div>
+
+      <div className=" flex flex-col gap-6">
+        <div className="">
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2">
+            Download CV
+          </h3>
+          <div className="flex flex-wrap gap-4">
+            <button
+              onClick={() => setFullstackModalIsOpen(true)}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
+            >
+              Full-Stack Developer
+            </button>
+            <button
+              onClick={() => setSoftwareEngineerModalIsOpen(true)}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
+            >
+              Software Engineer
+            </button>
+          </div>
+        </div>
+        <p className="text-gray-500 dark:text-gray-400">
+          More on my personal life? Check{" "}
+          <button
+            onClick={() => setPersonalInfoModalIsOpen(true)}
+            className="text-blue-500 dark:text-blue-400 hover:underline cursor-pointer"
+          >
+            this
+          </button>
+          .
+        </p>
       </div>
       {
         <div className="absolute top-0 left-0">

@@ -77,15 +77,23 @@ const SECTIONS = [
 
 function Tech() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-16 px-8 gap-12 2xl:gap-16 w-fit self-center">
-      {SECTIONS.map((section, index) => (
-        <Section key={index} title={section.title}>
-          {section.badges.map((badge, bIndex) => (
-            <TechBadge key={bIndex} title={badge.title} icon={badge.icon} />
-          ))}
-        </Section>
-      ))}
-    </section>
+    <>
+      <h1
+        id="techStack"
+        className="text-2xl pt-16 mx-auto font-bold text-gray-800 dark:text-gray-100 "
+      >
+        Tech Stack
+      </h1>
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-16 px-8 gap-12 2xl:gap-16 w-fit self-center">
+        {SECTIONS.map((section, index) => (
+          <Section key={index} title={section.title}>
+            {section.badges.map((badge, bIndex) => (
+              <TechBadge key={bIndex} title={badge.title} icon={badge.icon} />
+            ))}
+          </Section>
+        ))}
+      </section>
+    </>
   );
 }
 

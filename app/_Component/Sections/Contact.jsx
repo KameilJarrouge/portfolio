@@ -8,7 +8,7 @@ function Contact() {
     >
       <div className="max-w-xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Contact</h2>
-        <p className="mb-6 text-gray-600 dark:text-gray-400">
+        <p className="mb-6 text-gray-600 dark:text-gray-400 px-2">
           Interested in working together or just want to say hi? I’d love to
           hear from you.
         </p>
