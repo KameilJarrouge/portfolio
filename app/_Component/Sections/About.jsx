@@ -15,9 +15,9 @@ function About() {
     >
       <div className="w-full xl:w-2/5 flex flex-col gap-6">
         <img
-          src="/about.jpg"
+          src="/avatar.jpg"
           alt="Kamil"
-          className="w-fit h-[20rem] bg-gray-800"
+          className="w-full h-fit bg-gray-800"
         />
         {/* Call to Action */}
         <div className="">

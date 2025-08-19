@@ -11,13 +11,24 @@ function ProjectModal({ isOpen, setIsOpen, project }) {
     >
       <div className="max-w-[90vw] w-fit h-fit max-h-[80vh] xl:max-h-[90vh]  overflow-auto bg-white dark:bg-gray-900 p-6 rounded-lg ">
         {/* Title + Stack */}
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-          {project.title}{" "}
-          <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
-            ({project.type})
-          </span>
-        </h2>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+        <section className="flex flex-wrap justify-between items-center gap-4 ">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+            {project.title}{" "}
+            <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
+              ({project.type})
+            </span>
+          </h2>
+          {project.recommendation && (
+            <a
+              href={project.recommendation}
+              target="_blank"
+              className="text-blue-600 dark:text-blue-400 text-sm hover:underline w-fit cursor-pointer "
+            >
+              Recommendation Letter
+            </a>
+          )}
+        </section>
+        <p className="text-sm font-normal text-gray-500 dark:text-gray-400 mb-4 mt-1">
           {project.stack.join(" • ")}
         </p>
 
@@ -66,19 +77,6 @@ function ProjectModal({ isOpen, setIsOpen, project }) {
           </section>
         )}
 
-        {/* Footer / Links */}
-        {/* <div className="mt-6 flex justify-between self-end items-center text-sm text-gray-500 dark:text-gray-400">
-          {project.repo && (
-            <a
-              href={project.repo}
-              target="_blank"
-              className="text-blue-500 hover:underline"
-            >
-              View Code
-            </a>
-          )}
-        </div> */}
-
         {/* Repos */}
         {project.repos?.length > 0 && (
           <section className="mb-6">
@@ -94,7 +92,7 @@ function ProjectModal({ isOpen, setIsOpen, project }) {
                     target="_blank"
                     className="text-blue-500 hover:underline"
                   >
-                    {repo.name}
+                    {repo.title}
                   </a>
                 </li>
               ))}

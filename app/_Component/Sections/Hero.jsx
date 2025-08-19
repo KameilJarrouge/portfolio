@@ -3,11 +3,9 @@ import React from "react";
 function Hero() {
   return (
     <section className="flex flex-col items-center py-24 2xl:py-32 gap-6 ">
-      <img
-        src="/avatar.jpg"
-        alt="img"
-        className="rounded-full w-[200px] h-[200px] bg-white dark:bg-gray-800  mx-auto "
-      />
+      <div className="rounded-full w-[200px] h-[200px] bg-white dark:bg-gray-800  mx-auto flex items-center justify-center overflow-hidden">
+        <img src="/me.png" alt="img" className="object-cover w-full h-full" />
+      </div>
       <div className=" flex flex-col gap-2 items-center">
         <h1 className="text-4xl md:text-5xl font-bold dark:text-gray-100 text-gray-800">
           Kamil Victor Jarrouj
