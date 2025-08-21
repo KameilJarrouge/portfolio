@@ -148,7 +148,7 @@ function About() {
             </button>
           </div>
         </div>
-        <p className="text-gray-500 dark:text-gray-400">
+        {/* <p className="text-gray-500 dark:text-gray-400">
           More on my personal life? Check{" "}
           <button
             onClick={() => setPersonalInfoModalIsOpen(true)}
@@ -157,7 +157,7 @@ function About() {
             this
           </button>
           .
-        </p>
+        </p> */}
       </div>
       {
         <div className="absolute top-0 left-0">
