@@ -21,10 +21,41 @@ const PROJECTS = [
       "printable",
       "admin-tools",
     ],
-    repos: [{ title: "My-Lab", url: "#" }],
+    repos: [
+      { title: "My-Lab", url: "https://github.com/KameilJarrouge/my-lab" },
+    ],
     screenshots: [
-      { title: "Test", src: "/avatar.jpg" },
-      { title: "Test", src: "/me.png" },
+      {
+        title: "Main page (today's visits and summaries)",
+        src: "/my-lab/landingPage.jpeg",
+      },
+      {
+        title: "Manual Test Template Form",
+        src: "/my-lab/newManualTest.jpeg",
+      },
+      {
+        title: "Predefined Test Template Form",
+        src: "/my-lab/newPredefinedTest.jpeg",
+      },
+
+      {
+        title: "Patient Form",
+        src: "/my-lab/newPatient.jpeg",
+      },
+      {
+        title: "New Visit",
+        src: "/my-lab/newVisit.jpeg",
+      },
+      {
+        title: "Result Printout",
+        src: "/my-lab/result.png",
+      },
+    ],
+    diagrams: [
+      {
+        title: "ERD",
+        src: "/my-lab/my_lab_ERD.png",
+      },
     ],
     hasMoreDetails: true,
   },
@@ -96,6 +127,67 @@ const PROJECTS = [
       "Python",
       "real-time",
       "multi-stack",
+    ],
+    diagrams: [
+      {
+        title: "Database Representation",
+        src: "/ATMS/diagrams/database.png",
+      },
+      {
+        title: "ERD",
+        src: "/ATMS/diagrams/ERD.png",
+      },
+      {
+        title: "Face Detection and Recognition flow chart",
+        src: "/ATMS/diagrams/pythonFlow.png",
+      },
+      {
+        title: "Recognition and Detection Unit",
+        src: "/ATMS/diagrams/pythonAIFlow.png",
+      },
+      {
+        title: "Information data structure",
+        src: "/ATMS/diagrams/pythonInformationStructure.png",
+      },
+    ],
+    screenshots: [
+      {
+        title:
+          "This page for browsing, edit and adding new people to the system",
+        src: "/ATMS/screenshots/peoplePage.png",
+      },
+      {
+        title: "Recognition log for a specific person",
+        src: "/ATMS/screenshots/recognitionLog.png",
+      },
+      {
+        title: "Student Attendance in his/her classes",
+        src: "/ATMS/screenshots/studentAttendance.png",
+      },
+      {
+        title: "Students Attendance in a specific class",
+        src: "/ATMS/screenshots/classAttendance.png",
+      },
+      {
+        title: "Log of a specific Camera",
+        src: "/ATMS/screenshots/cameraLog.png",
+      },
+    ],
+    hasMoreDetails: true,
+    repos: [
+      {
+        title: "Tracking and Attendance System (frontend)",
+        url: "https://github.com/KameilJarrouge/TrackingAndAttendanceSystem_frontend",
+      },
+      {
+        title: "Tracking and Attendance System (backend)",
+        url: "https://github.com/KameilJarrouge/TrackingAndAttendanceSystem_backend",
+      },
+      {
+        title:
+          "Tracking and Attendance System (Face Recognition and Detection using Python)",
+        url: "https://github.com/KameilJarrouge/TrackingAndAttendance_python",
+      },
     ],
   },
   {

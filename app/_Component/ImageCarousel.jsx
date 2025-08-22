@@ -21,7 +21,7 @@ export default function ImageCarousel({ images }) {
       >
         {images.map((img, i) => (
           <SwiperSlide key={i}>
-            <div className="w-[90ch] h-[30rem] flex justify-center bg-black/20">
+            <div className="w-full aspect-[16/9] flex justify-center bg-black/20">
               <img
                 src={img.src}
                 onClick={() => {
@@ -38,21 +38,21 @@ export default function ImageCarousel({ images }) {
         setOpen={setOpen}
         slides={images}
         index={index}
-        render={{
-          slide: ({ slide }) => (
-            <div className="relative w-[95vw] md:w-[85vw] lg:w-[75vw] xl:w-[65vw] h-fit flex justify-center">
-              <img
-                src={slide.src}
-                alt={slide.title}
-                className="rounded shadow object-cover "
-              />
+        // render={{
+        //   slide: ({ slide }) => (
+        //     <div className="relative w-[95vw] md:w-[85vw] lg:w-[75vw] xl:w-[65vw] h-fit flex justify-center">
+        //       <img
+        //         src={slide.src}
+        //         alt={slide.title}
+        //         className="rounded shadow object-cover "
+        //       />
 
-              <div className="absolute bottom-0 left-0 text-center w-full bg-black/70  text-white text-sm px-2 py-1 ">
-                {slide.title}
-              </div>
-            </div>
-          ),
-        }}
+        //       <div className="absolute bottom-0 left-0 text-center w-full bg-black/70  text-white text-sm px-2 py-1 ">
+        //         {slide.title}
+        //       </div>
+        //     </div>
+        //   ),
+        // }}
       />
     </>
   );
