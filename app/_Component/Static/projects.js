@@ -79,9 +79,9 @@ const PROJECTS = [
       "GraphQL",
       "UX",
     ],
-    screenshots: [{ title: "Test", src: "/avatar.jpg" }],
+    // screenshots: [{ title: "Test", src: "/avatar.jpg" }],
 
-    hasMoreDetails: true,
+    // hasMoreDetails: true,
     recommendation: "#",
   },
   {
@@ -169,7 +169,7 @@ const PROJECTS = [
         src: "/ATMS/screenshots/classAttendance.png",
       },
       {
-        title: "Log of a specific Camera",
+        title: "Log of a specific camera",
         src: "/ATMS/screenshots/cameraLog.png",
       },
     ],
@@ -257,6 +257,32 @@ const PROJECTS = [
       "calorie-tracking",
       "journaling",
       "typing",
+    ],
+    hasMoreDetails: true,
+    screenshots: [
+      { title: "Home page", src: "/manager/Manager_Home.png" },
+      { title: "To Do page", src: "/manager/Manager_TODO.png" },
+      {
+        title: "Important Dates page",
+        src: "/manager/Manager_Dates.png",
+      },
+      { title: "Typing Practice", src: "/manager/Manager_Typing.png" },
+      {
+        title: "Calories Tracker Main page",
+        src: "/manager/Manager_Calories_Main.png",
+      },
+      {
+        title: "Calories Tracker Days Log page",
+        src: "/manager/Manager_Calories_Log.png",
+      },
+      {
+        title: "Calories Tracker for a specific day",
+        src: "/manager/Manager_Calories_Day.png",
+      },
+      { title: "Journal", src: "/manager/Manager_Journal.png" },
+    ],
+    repos: [
+      { title: "manager", url: "https://github.com/KameilJarrouge/manager" },
     ],
   },
 ];
