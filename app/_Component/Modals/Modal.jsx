@@ -14,7 +14,7 @@ function Modal({ isOpen, close, children, uniqueName = "unique" }) {
 
   useEffect(() => {
     if (!isOpen) return;
-
+    document.body.classList.add("overflow-hidden");
     const modalContainer = document.getElementById(
       `modal-container-${uniqueName}`
     );
@@ -26,6 +26,7 @@ function Modal({ isOpen, close, children, uniqueName = "unique" }) {
     modalContainer.addEventListener("click", handleOutsideClick);
 
     return () => {
+      document.body.classList.remove("overflow-hidden");
       modalContainer.removeEventListener("click", handleOutsideClick);
     };
   }, [isOpen]);

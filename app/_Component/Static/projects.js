@@ -212,6 +212,33 @@ const PROJECTS = [
       "diagnostics",
       "custom-client",
     ],
+    hasMoreDetails: true,
+    diagrams: [{ title: "ERD", src: "/dental/diagrams/ERD.png" }],
+    screenshots: [
+      { title: "Home page", src: "/dental/screenshots/dental_Home.png" },
+      {
+        title: "Patients page",
+        src: "/dental/screenshots/dental_PatientsPage.png",
+      },
+      {
+        title: "Patient Page",
+        src: "/dental/screenshots/dental_PatientPage.png",
+      },
+      {
+        title: "Adding a treatment to a patient",
+        src: "/dental/screenshots/dental_NewTreatment.png",
+      },
+    ],
+    repos: [
+      {
+        title: "dental clinic backend",
+        src: "https://github.com/KameilJarrouge/dental_clinic_manager_backend",
+      },
+      {
+        title: "dental clinic frontend",
+        src: "https://github.com/KameilJarrouge/dental_clinic_manager_frontend",
+      },
+    ],
   },
   {
     title: "Ophthalmologist Clinic Management System",
