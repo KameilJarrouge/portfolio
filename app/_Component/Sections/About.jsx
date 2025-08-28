@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import ChooseCVModal from "../Modals/ChooseCVModal";
-import PersonalInfoModal from "../Modals/PersonalInfoModal";
+// import ChooseCVModal from "../Modals/ChooseCVModal";
+// import PersonalInfoModal from "../Modals/PersonalInfoModal";
 
 function About() {
-  const [fullstackModalIsOpen, setFullstackModalIsOpen] = useState(false);
-  const [softwareEngineerModalIsOpen, setSoftwareEngineerModalIsOpen] =
-    useState(false);
-  const [personalInfoModalIsOpen, setPersonalInfoModalIsOpen] = useState(false);
+  // const [fullstackModalIsOpen, setFullstackModalIsOpen] = useState(false);
+  // const [softwareEngineerModalIsOpen, setSoftwareEngineerModalIsOpen] =
+  //   useState(false);
+  // const [personalInfoModalIsOpen, setPersonalInfoModalIsOpen] = useState(false);
 
   return (
     <section
@@ -106,8 +106,8 @@ function About() {
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-2">Languages</h3>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1 ">
-              <li>English (fluent)</li>
-              <li>Arabic (native)</li>
+              <li>English (C1-C2)</li>
+              <li>Arabic (Mother Tongue)</li>
               {/* <li>German (A1-A2)</li> */}
             </ul>
           </div>
@@ -134,7 +134,14 @@ function About() {
             Download CV
           </h3>
           <div className="flex flex-wrap gap-4">
-            <button
+            <a
+              href="/General_CV.pdf"
+              target="_blank"
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
+            >
+              Full-Stack Developer / Software Engineer
+            </a>
+            {/* <button
               onClick={() => setFullstackModalIsOpen(true)}
               className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
             >
@@ -145,7 +152,7 @@ function About() {
               className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
             >
               Software Engineer
-            </button>
+            </button> */}
           </div>
         </div>
         {/* <p className="text-gray-500 dark:text-gray-400">
@@ -159,7 +166,7 @@ function About() {
           .
         </p> */}
       </div>
-      {
+      {/* {
         <div className="absolute top-0 left-0">
           <ChooseCVModal
             isOpen={fullstackModalIsOpen}
@@ -204,7 +211,7 @@ function About() {
             ]}
           />
         </div>
-      }
+      } */}
     </section>
   );
 }
