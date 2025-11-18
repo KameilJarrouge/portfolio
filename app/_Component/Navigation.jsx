@@ -18,6 +18,9 @@ function Navigation() {
           <NavLink href={"#about"} title={"About"} />
         </li>
         <li>
+          <NavLink href={"#CV"} title={"CV"} />
+        </li>
+        <li>
           <NavLink href={"#contact"} title={"Contact"} />
         </li>
         <li>

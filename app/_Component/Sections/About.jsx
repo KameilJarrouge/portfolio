@@ -11,7 +11,7 @@ function About() {
   return (
     <section
       id="about"
-      className="relative text-gray-800 dark:text-gray-100 py-16 px-4 mx-auto xl:w-7xl 2xl:w-[96rem] min-h-[40rem] flex flex-col xl:flex-row gap-6"
+      className="relative text-gray-800  dark:text-gray-100 py-16 px-4 mx-auto xl:w-7xl 2xl:w-[96rem] min-h-[40rem] flex flex-col xl:flex-row gap-6"
     >
       <div>
         {/* Intro */}
@@ -37,7 +37,9 @@ function About() {
         <div className="flex  flex-col xl:flex-row xl:gap-6">
           {/* Certificates */}
           <div className="mb-8">
-            <h3 className="text-xl font-semibold mb-2">Certificates</h3>
+            <h3 className="text-xl font-semibold mb-2">
+              Certifications & Specializations
+            </h3>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
               <li>
                 <a
@@ -128,19 +130,39 @@ function About() {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-6">
+      <div id="CV" className=" flex flex-col gap-6  -translate-y-16 pt-16">
         <div className="">
           <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2">
-            Download CV
+            Download My CV
           </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300  mb-6 max-w-[70ch]">
+            I tailor my applications to local expectations. Feel free to choose
+            the format that suits your review process.
+          </p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="/General_CV.pdf"
+              href="/Kamil_Jarrouj_CV_Formal.pdf"
               target="_blank"
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
+              className="px-2 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
             >
-              Full-Stack Developer / Software Engineer
+              Formal
+              <p className="text-sm">DOB, nationality, photo</p>
             </a>
+            <a
+              href="/Kamil_Jarrouj_CV_Modern.pdf"
+              target="_blank"
+              className="px-2 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
+            >
+              Modern
+              <p className="text-sm">no personal details</p>
+            </a>
+            {/* <a
+                href="/General_CV.pdf"
+                target="_blank"
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
+              >
+                Full-Stack Developer / Software Engineer
+              </a> */}
             {/* <button
               onClick={() => setFullstackModalIsOpen(true)}
               className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700  dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
